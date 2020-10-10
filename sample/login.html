@@ -1,0 +1,121 @@
+ <html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.70">
+  <title>Switzerland Tourism-Priyanka_biswas</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/styles.css">
+     <link rel="icon" href="images/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&amp;family=Pangolin&amp;display=swap" rel="stylesheet">
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src = "js/cities.js"></script>
+</head>
+<body>
+  <div class="container mt-5 compose">
+    <h6>Details</h6>
+
+
+
+            <!-- Makes POST request to /login route -->
+            <form action="/login" method="POST">
+              
+              <div class="form-group">
+                 <label for="nameip">NAME:</label>
+                  <input name='nameip' placeholder="Enter your Name" type="text" class="form-control"></input>
+              </div>
+
+              <div class="form-group">
+                <label for="emailinput">Email</label>
+                <input type="email" name="emailinput" placeholder="me@gmail.com" class="form-control"></input>
+              </div>
+
+              <div class="form-group">
+                 <label for="passwordip">Password:</label>
+                  <input type="password" name="passwordip" class="form-control"></input><br>
+              </div>
+
+              <div align="left"> 
+                 Gender:<br>
+                 <label><input type="radio" name="radiobuttoninput">Male</input></label><br>
+                 <label><input type="radio" name="radiobuttoninput">Female</input></label><br>
+
+                 Want to Visit City/Cities:<br>
+                 <label><input type="checkbox" name="checkinput">Zurich</input></label><br>
+                 <label><input type="checkbox" name="checkinput">Geneva</input></label><br>
+                 <label><input type="checkbox" name="checkinput">Basel</input></label><br>
+                 <label><input type="checkbox" name="checkinput">Others</input></label><br>
+              
+                 
+                 <div class="form-group">
+                 <label>Date of Journey:</label>
+                <input type="date" name="dateinput"></input><br>
+                 </div>
+
+                 <div class="form-group">
+                 <label>No of persons(1-10):</label>
+                 <input type="number" name="numberinput" max="10" min="1" width="100%"></input><br>
+                 </div>
+
+                 <fieldset>
+                   <legend>Residental Address</legend> 
+                   <div class="form-group">     
+                   <label for ="shippingName">Address:</label>      
+                   <input type = "text" name = "Name" id = "shippingName" required><br/>
+                   </div>
+
+                   <div class="form-group">
+                  <label for = "shippingzip">Zip code:</label>      
+                  <input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
+                   </div>
+                 </fieldset>
+   
+                 <input type="checkbox" id="same" name="same" onchange= "addressFunction()"/>   
+                 <label for = "same">Is the Permanent Address Same?</label>
+   
+                <fieldset>
+                  <legend>Permanent Address</legend>  
+                   <div class="form-group">     
+                  <label for ="billingName">Address:</label>      
+                  <input type = "text" name = "Name" id = "billingName" required><br/>
+                </div>
+                   
+                 <div class="form-group">
+                  <label for = "billingzip">Zip code:</label>      
+                  <input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+                </div>
+
+                </fieldset>
+        
+               
+                <label>Rate us:<input type="range" name="rangeinput" max="9" min="1"></input></label><br>
+
+                <label>COLOUR:<input type="color" name="colourinput" max="10" min="1"></input></label>
+               </div>
+                
+                <div class="form-group">
+                <label for="urlinput">URL:</label>
+                  <input type="url" name="urlinput" class="form-control"></input>
+                </div>
+
+                <hr>
+              <center><button type="submit" class="btn btn-dark" >Log in</button></center>
+            </form>
+
+  <h6>Note:This is only front-end of the website , back-end of it is not currently attachted to.</h6>
+</div>
+</body>
+
+</html>
+
